@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 
@@ -17,10 +18,10 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
+@Document(collection = "Team")
 public class Team {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     private String name;
